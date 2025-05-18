@@ -21,6 +21,7 @@
     justify-content: space-between;
     background: var(--branco);
     padding: 10px 0px;
+ 
 }
 
 .nav-top.cart a{
@@ -32,6 +33,7 @@
     border: 1px solid var(--gelo);
     border-radius: 50%;
     color: var(--preto);
+ 
 }
 
 .nav-top.cart a:first-child{
@@ -60,7 +62,7 @@
     align-items: center;
     width: 90%;
     height: 120px;
-   /* background: var(--vermelho); */
+    padding: 10px 0px;
     margin: auto;
     border-bottom: 1px solid var(--gelo);
 }
@@ -78,6 +80,7 @@
 .area-img img{
    max-width: 120px;
    height: 120px;
+   object-fit: contain;
 }
 
 .area-details{
@@ -85,4 +88,113 @@
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
+    height: 100%;
+}
+
+.sup{
+    width: 100%;
+   /* background-color: rebeccapurple; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name-prod{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 15px;
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.delete-item {
+    font-size: 18px;
+    color: var(--preto2);
+    margin-right: 10px;
+}
+
+.middle span{
+   color: var(--preto);
+   margin-left: 15px;
+}
+
+.preco-quantidade {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+.preco-quantidade span{
+    flex: 50%;   
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--preto);
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.count{
+   flex: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start ;
+   color: var(--preto);
+}
+
+.minus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: gray;
+    background: var(--branco);
+    border: 1px solid var(--gelo);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.qtd-item{
+   width: 15px; 
+   text-align: center;
+   background: var(--branco) !important;
+
+}
+
+.plus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--verde);
+    background: var(--branco);
+    border: 1px solid var(--verde);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+.flex-100{
+    flex: 1;
+    text-align: center;
+}
+
+.w-80{
+   width: 80%;
+   padding: 8px 0px;
+}
+
+#totais{
+    flex-direction: column;
+}
+
+.bd-bottom{
+    border-bottom: 3px solid var(--gelo);
 }

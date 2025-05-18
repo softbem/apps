@@ -7,14 +7,17 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!-- Color theme for statusbar (Android only) -->
     <meta name="theme-color" content="#e6d5c1">
+
     <!-- Your app title -->
     <title>Simples App</title>
+
     <!-- Path to Framework7 Library Bundle CSS -->
     <link rel="stylesheet" href="lib/framework7-bundle.min.css">
-    <!-- CSS PERSONALIZADO PARA MENU-->
 
+    <!-- CSS PERSONALIZADO PARA MENU-->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/detalhes.css">
     <link rel="stylesheet" href="css/carrinho.css">
@@ -66,7 +69,7 @@
                 
                <div class="top-nav">
                   <h1 class="title-logo"><span>Huay</span>app</h1>
-                  <a href="#" class="btn-cart" data-count="0">
+                  <a href="/carrinho/" class="btn-cart" data-count="1">
                     <i class="ri-shopping-bag-line"></i>
                   </a>
                </div>
@@ -166,80 +169,107 @@
 
                         <div id="produtos" class="margin-top row display-flex align-itens-center justif-content-start">
                             
-                            <!--------------item card----------->    
+
+                             <!--------------item skeleton-----------> 
+
                            <div class="item-card">
                                     <a href="/detalhes/" class="item">
-                                       <div class="img-container">
-                                            <img  src="./img/airpod.png" alt="">
+                                       <div class="img-container skeleton-effect-wave">
+                                           
                                        </div>
                                        <div class="nome-rating">
-                                            <span class="color-gray">Nome do item</span>
-                                             <span class="bold margin-right">
-                                                <i class="mdi mdi-star"></i>
-                                                4.8
-                                             </span>
+                                            <span style="margin-right:auto; width: 90px" 
+                                             class="gelo skeleton-effect-wave skeleton-block color-gray"></span>
+                                            
+                                             <span style=" width:20px; margin-right: 5px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                              
+                                             <span style="width: 30px;  margin-right: 15px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
                                        </div>
                                        <div class="price bold">
-                                              R$:252.80
+                                             <span style="margin-top:5px; height:20px; width: 60px;" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
+                                       </div>
+                                    </a>
+                                </div> 
+
+                            <div class="item-card">
+                                    <a href="/detalhes/" class="item">
+                                       <div class="img-container skeleton-effect-wave">
+                                           
+                                       </div>
+                                       <div class="nome-rating">
+                                            <span style="margin-right:auto; width: 90px" 
+                                             class="gelo skeleton-effect-wave skeleton-block color-gray"></span>
+                                            
+                                             <span style=" width:20px; margin-right: 5px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                              
+                                             <span style="width: 30px;  margin-right: 15px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
+                                       </div>
+                                       <div class="price bold">
+                                             <span style="margin-top:5px; height:20px; width: 60px;" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
+                                       </div>
+                                    </a>
+                                </div>   
+                            
+                            <div class="item-card">
+                                    <a href="/detalhes/" class="item">
+                                       <div class="img-container skeleton-effect-wave">
+                                           
+                                       </div>
+                                       <div class="nome-rating">
+                                            <span style="margin-right:auto; width: 90px" 
+                                             class="gelo skeleton-effect-wave skeleton-block color-gray"></span>
+                                            
+                                             <span style=" width:20px; margin-right: 5px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                              
+                                             <span style="width: 30px;  margin-right: 15px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
+                                       </div>
+                                       <div class="price bold">
+                                             <span style="margin-top:5px; height:20px; width: 60px;" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
                                        </div>
                                     </a>
                                 </div> 
                                 
-                           <div class="item-card">
-                                    <a href="#" class="item">
-                                       <div class="img-container">
-                                            <img  src="./img/xbox.png" alt="">
+                            <div class="item-card">
+                                    <a href="/detalhes/" class="item">
+                                       <div class="img-container skeleton-effect-wave">
+                                           
                                        </div>
                                        <div class="nome-rating">
-                                            <span class="color-gray">Nome do item</span>
-                                             <span class="bold margin-right">
-                                                <i class="mdi mdi-star"></i>
-                                                4.8
-                                             </span>
+                                            <span style="margin-right:auto; width: 90px" 
+                                             class="gelo skeleton-effect-wave skeleton-block color-gray"></span>
+                                            
+                                             <span style=" width:20px; margin-right: 5px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                              
+                                             <span style="width: 30px;  margin-right: 15px" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
                                        </div>
                                        <div class="price bold">
-                                              R$:232.80
+                                             <span style="margin-top:5px; height:20px; width: 60px;" 
+                                             class="gelo skeleton-effect-wave skeleton-block"></span>
+                                            
                                        </div>
                                     </a>
-                                </div> 
+                                </div>     
 
-                                <div class="item-card">
-                                    <a href="#" class="item">
-                                       <div class="img-container">
-                                            <img  src="./img/macbook.png" alt="">
-                                       </div>
-                                       <div class="nome-rating">
-                                            <span class="color-gray">Nome do item</span>
-                                             <span class="bold margin-right">
-                                                <i class="mdi mdi-star"></i>
-                                                4.8
-                                             </span>
-                                       </div>
-                                       <div class="price bold">
-                                              R$:232.80
-                                       </div>
-                                    </a>
-                                </div> 
-
-                                <div class="item-card">
-                                    <a href="#" class="item">
-                                       <div class="img-container">
-                                            <img  src="./img/iphone.png" alt="">
-                                       </div>
-                                       <div class="nome-rating">
-                                            <span class="color-gray">Nome do item</span>
-                                             <span class="bold margin-right">
-                                                <i class="mdi mdi-star"></i>
-                                                4.8
-                                             </span>
-                                       </div>
-                                       <div class="price bold">
-                                              R$:232.80
-                                       </div>
-                                    </a>
-                                </div> 
-                        </div>
-                        
+                            <!--------------item card----------->    
+                     </div>  
 <br><br><br><br><br><br>
                     </div>
                 </div>
