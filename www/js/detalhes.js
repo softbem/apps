@@ -10,7 +10,7 @@ var id = parseInt(localStorage.getItem('detalhe'));
     var item = produtos.find(produto => produto.id === id);
 
     if(item){
-        console.log('Produto encontrado: ',item );
+        console.log('Produto encontrado: ',item);
 
   
         //ALIMENTAS OS CAMPOS
@@ -27,7 +27,7 @@ var id = parseInt(localStorage.getItem('detalhe'));
 
          var tabelaDetalhes = $("#tabdetalhes");
 
-           item.detalhes.forEach(detalhe=>{
+           item.detalhes.forEach(detalhe => {
                 var linha = `
                     <tr>
                         <td>${detalhe.caracteristica}</td>
@@ -44,20 +44,20 @@ var id = parseInt(localStorage.getItem('detalhe'));
 
       //FUNÇÃO PARA ADIONAR AO CARRINHO 
 
-    var carrinho = JSON.parse(localStorage.getItem('carrinho'))  || [];
+    var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
     function adicionarAoCarrinho(item, quantidade){
-         var itemNoCarrinho = carrinho.find(c=> c.item === item.id);
+         var itemNoCarrinho = carrinho.find(c=> c.item.id === item.id);
          
-         if (itemNoCarrinho){
+         if(itemNoCarrinho){
 
             itemNoCarrinho.quantidade += quantidade;
-            item.itemNoCarrinho.total_item = item.itemNoCarrinho * item.preco_promocional;
+            itemNoCarrinho.total_item = itemNoCarrinho.quantidade * item.preco_promocional;
          }else{
             carrinho.push({
               item: item,
               quantidade: quantidade,
-              total_item: quantidade * item.preco_promocional
+              total_item: quantidade * item.preco_promocional,
             });
          }
 
@@ -73,8 +73,7 @@ var id = parseInt(localStorage.getItem('detalhe'));
 
             var toastCenter = app.toast.create({
                 text: `
-                 ${item.nome} adicionado ao carrinho
-                `,
+                 ${item.nome} adicionado ao carrinho`,
                 position: 'center',
                 closeTimeout: 2000,
              });

@@ -27,7 +27,7 @@ body{
 }
 
 .toolbar-inner{
-    background: var(--sinza);
+    background: var(--branco);
     border-top: 0px solid var(--preto);
     
 }
@@ -53,7 +53,7 @@ body{
 .top-nav{
     width: 100%;
     height: 60px;
-    background: var(--sinza);
+    background: var(--branco);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,7 +119,7 @@ form{
    position: relative;
 }
 
-input[type=text]{
+#search{
     width: 90%;
     height: 45px;
     border-radius: 10px;

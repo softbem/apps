@@ -52,7 +52,7 @@
    ///VER QUANTOS ITEMS TEM NO CARRINHO
     
      setTimeout(() => {
-          var carrinho = JSON.parse(localStorage.getItem('carrinho'));
+          var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
            $('.btn-cart').attr('data-count', carrinho.length);
      }, 300);
 

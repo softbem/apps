@@ -43,7 +43,7 @@
             }
         ],
         "preco": 239.99,
-        "preco_promocional": 229.99
+        "preco_promocional": 200.00
     },
     {
         "id": 2,
@@ -92,8 +92,8 @@
                 "detalhes": "Recursos de segurança avançados, incluindo reconhecimento facial e autenticação biométrica"
             }
         ],
-        "preco": 15599.99,
-        "preco_promocional": 14999.99
+        "preco": 1599.99,
+        "preco_promocional": 199.99
     },
     {
         "id": 3,

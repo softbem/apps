@@ -37,7 +37,7 @@
                 <div class="nav-top cart">
                     
                     <a href="/index/"><i class="ri-arrow-left-s-line"></i></a>
-                    <strong>CARRINHO<i class="ri-shopping-cart-2-fill"></i></strong>
+                    <strong>CARRINHO 😀<i class="ri-shopping-cart-2-fill"></i></strong>
                     <a href="#" class="link popover-open" data-popover=".popover-menu"><i class="ri-more-fill"></i></a> 
                    
                 </div>
@@ -49,7 +49,7 @@
                            <li> 
                               <a id="esvaziar" href="/#/" class="list-button popover-close">
                                 <i class="mdi mdi-broom"></i>
-                                  Esvaziar Carrinho
+                                  Esvaziar Carrinho 😞
                               </a>
                             </li>
                         </ul>
@@ -59,23 +59,24 @@
 
                 
                 <!-- TAB BAR-->
-                <div style="margin-bottom: 72px;" class="toolbar toolbar-bottom">
+                <div id="toolbarTotais" style= "margin-bottom: 72px;" class="toolbar toolbar-bottom">
                   <div id="totais" class="toolbar-inner display-flex align-items-center justify-content-center">
                        <div class=" bd-bottom margin-10px w-80 display-flex justify-content-space-between">
-                           <span> SubTotal:</span>
-                           <span class="bold"> R$: 800,00 <span class="mdi mdi-cash-check"></span></span>
+                           <span> SubTotal: ✔</span>
+                           <span id="subtotal" class="bold"><span 
+                            class="mdi mdi-cash-check"></span></span>
                        </div>
 
                        <div class="w-80 display-flex justify-content-space-between">
-                           <span> Frete:</span>
-                           <span  class="bold"> R$: 15,00 <span class="mdi mdi-truck-delivery"></span></span>
+                           <span> Taxa da entrega no Subtotal: ✔</span>
+                           <span id="frete" class="bold"> R$:4.99 <span class="mdi mdi-truck-delivery"></span></span>
                        </div>
                   </div>
                  </div>
 
                  
                  <!-- TAB BAR-->
-                 <div class="toolbar toolbar-bottom">
+                 <div id="toolbarCheckout" class="toolbar toolbar-bottom">
                   <div class="toolbar-inner display-flex align-items-center 
                   justify-content-center">
                      <div class="flex-100">
@@ -115,7 +116,7 @@
                                       <span>R$:9.500</span>
                                        <div class="count">
                                            <a class="minus" href="#">-</a>
-                                           <input readonly class="qtd-item"  type="text" value="1">
+                                           <input readonly class="qtd-item"  type="text" value="0">
                                            <a class="plus" href="#">+</a>
                                        </div>
                                 </div>
@@ -145,7 +146,7 @@
                                       <span>R$:9.500</span>
                                        <div class="count">
                                            <a class="minus" href="#">-</a>
-                                           <input readonly class="qtd-item"  type="text" value="1">
+                                           <input readonly class="qtd-item"  type="text" value="0">
                                            <a class="plus" href="#">+</a>
                                        </div>
                                 </div>
