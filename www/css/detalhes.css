@@ -150,13 +150,13 @@ th {
 }
 
 .add-cart{
-    width: 70%;
-    height: 40px;
+    width: 90%;
+    height: 50px;
     border-radius: 15px;
     border: none;
     background-color: var(--verde);
     color: var(--branco);
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 800;
 }

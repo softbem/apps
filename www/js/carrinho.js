@@ -31,7 +31,7 @@ function renderizarCarrinho(){
             $.each(carrinho, function(index, itemCarrinho){
                  var itemDiv = `
                      <!-----------items do carrinho------>
-                        <div class="item-carrinho" data-index='${index}'>
+                        <div class="item-carrinho">
                             <div class="area-img">
                                 <img src="${itemCarrinho.item.imagem}" alt="">
                             </div>
@@ -40,7 +40,7 @@ function renderizarCarrinho(){
                                     <span class="name-prod">
                                        ${itemCarrinho.item.nome}
                                     </span>
-                                    <a class="delete-item" href="#">
+                                    <a data-index='${index}' class="delete-item" href="#">
                                         <i class="mdi mdi-close"></i>
                                     </a>
                                 </div>
@@ -64,7 +64,55 @@ function renderizarCarrinho(){
 
                  $("#listaCarrinho").append(itemDiv);
             });
+
+       ///  DELETR ITEMS DO CARRINHO
+    $(".delete-item").on('click',  function () {
+     var index = $(this).data('index');
+         app.dialog.confirm ('Tem certeza que quer remover esté ITEM?','Remover', function(){
+          carrinho.splice(index, 1);
+          localStorage.setItem('carrinho', JSON.stringify(carrinho));
+          app.views.main.router.refreshPage();
+          
+     }); 
+});
+
+
+    ///  DIMINUIR ITEMS DO CARRINHO
+    $(".minus").on('click',  function () {
+     var index = $(this).data('index');
+         
+          if(carrinho[index].quantidade > 1){
+            carrinho[index].quantidade--;
+            carrinho[index].total_item = carrinho[index].quantidade *  carrinho[index].item.preco_promocional;
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+             app.views.main.router.refreshPage();
+           
+
+          }else{
+             var itemname = carrinho[index].item.nome;
+             app.dialog.confirm(`Gostária de remover <strong>${itemname}</strong>?`, 'REMOVER', function(){
+                carrinho.splice(index, 1);
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                renderizarCarrinho();
+                calcularTotal();
+             });
+          }
+     });
+
+
+      ///  PLUS ITEMS NO CARRINHO
+    $(".plus").on('click',  function () {
+     var index = $(this).data('index');
+         
+            carrinho[index].quantidade++;
+            carrinho[index].total_item = carrinho[index].quantidade *  carrinho[index].item.preco_promocional;
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            renderizarCarrinho();
+            calcularTotal();
+     });
+
 }
+
 
 
 function calcularTotal() {
@@ -110,6 +158,11 @@ $("#esvaziar").on('click', function () {
                   localStorage.removeItem('carrinho');
                   app.views.main.router.refreshPage();
          });
-});
+})
+
+
+
+
+
 
  
